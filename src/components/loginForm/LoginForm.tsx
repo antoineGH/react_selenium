@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Input, Button, Checkbox } from 'antd'
+import { Form, Input, Button } from 'antd'
 
 const onFinish = (values: any) => {
 	console.log('Success', values)
@@ -24,6 +24,7 @@ const LoginForm = () => {
 				<Form.Item
 					label='Username'
 					name='username'
+					className='username'
 					rules={[{ required: true, message: 'Please input your username!' }]}>
 					<Input />
 				</Form.Item>
@@ -36,7 +37,7 @@ const LoginForm = () => {
 				</Form.Item>
 
 				<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-					<Button type='primary' htmlType='submit'>
+					<Button id='basic-submit' type='primary' htmlType='submit'>
 						Submit
 					</Button>
 				</Form.Item>
